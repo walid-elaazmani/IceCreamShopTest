@@ -12,7 +12,7 @@ public class IceCreamCar implements IceCreamSeller{
 
     public IceCreamCar(PriceList priceList) {
         this.priceList = priceList;
-        stock = new Stock(3,3,10,4);
+        stock = new Stock(3,4,10,4);
 
     }
 
@@ -46,7 +46,7 @@ public class IceCreamCar implements IceCreamSeller{
         if (stock.getIceRockets() > 0) {
             stock.setIceRockets(stock.getIceRockets()-1);
             return new IceRocket();
-        } else System.out.println("no more");
+        } else System.out.println("no moree");
 
         return null;
 
@@ -62,7 +62,7 @@ public class IceCreamCar implements IceCreamSeller{
         if (stock.getMagni() > 0) {
             stock.setMagni(stock.getMagni()-1);
             return new Magnum(type);
-        } else System.out.println("no more");
+        } else System.out.println("no moreee");
 
         return null;
     }

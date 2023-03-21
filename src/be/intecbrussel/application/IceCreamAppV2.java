@@ -13,16 +13,14 @@ public class IceCreamAppV2 {
         PriceList priceList = new PriceList(1,1,1);
         IceCreamCar iceCreamCar = new IceCreamCar(priceList);
 
-        Cone.Flavor [] flavorsOrder1 = {Cone.Flavor.BANANA, Cone.Flavor.LEMON, Cone.Flavor.MOKKA};
-
-        Magnum magnum = iceCreamCar.orderMagnum(Magnum.MagnumType.ROMANTICSTRAWBERRIES);
-
-        Cone cone = iceCreamCar.orderCone(flavorsOrder1);
-
-        IceRocket iceRocket = iceCreamCar.orderIceRocket();
-
-
-        Eatable[] eatables = {iceRocket, iceCreamCar.orderMagnum(Magnum.MagnumType.ALPINENUTS), magnum, cone, iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.LEMON}), iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.PISTACHE}), iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.STRATCIATELLE})};
+        Eatable[] eatables = {
+                iceCreamCar.orderIceRocket(),
+                iceCreamCar.orderMagnum(Magnum.MagnumType.ALPINENUTS),
+                iceCreamCar.orderMagnum(Magnum.MagnumType.ROMANTICSTRAWBERRIES),
+                iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.BANANA, Cone.Flavor.LEMON, Cone.Flavor.MOKKA}),
+                iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.LEMON}),
+                iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.PISTACHE}),
+                iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.STRATCIATELLE})};
 
         for (Eatable eatable : eatables) {
             eatable.eat();
