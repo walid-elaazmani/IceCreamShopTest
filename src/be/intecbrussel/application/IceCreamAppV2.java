@@ -15,27 +15,26 @@ public class IceCreamAppV2 {
 
         Eatable[] eatables = {
                 iceCreamCar.orderIceRocket(),
+
                 iceCreamCar.orderMagnum(Magnum.MagnumType.ALPINENUTS),
                 iceCreamCar.orderMagnum(Magnum.MagnumType.ROMANTICSTRAWBERRIES),
                 iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.BANANA, Cone.Flavor.LEMON, Cone.Flavor.MOKKA}),
                 iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.LEMON}),
                 iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.PISTACHE}),
-                iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.STRATCIATELLE})};
+                iceCreamCar.orderIceRocket(),
+                iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.STRATCIATELLE})
+        };
+
 
         for (Eatable eatable : eatables) {
-            eatable.eat();
+            if(eatable != null){
+                eatable.eat();
+            } else System.out.println("No more of that particular icecream" );
         }
 
-        System.out.println(iceCreamCar.getProfit());
-
-
-
-
-
-
-
-
-
-
+        System.out.format("%.2f € \n", iceCreamCar.getProfit());
     }
+
+
+
 }

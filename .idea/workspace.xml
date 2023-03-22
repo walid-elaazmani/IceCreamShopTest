@@ -7,12 +7,21 @@
     <list default="true" id="9900f1a1-61d4-40d8-ae07-4f917f4984ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/application/IceCreamAppV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/application/IceCreamAppV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/eatables/IceRocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/eatables/IceRocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamSalon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamSalon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,9 +41,30 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Walid/Desktop/icecreamshop1"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="IceCreamAppV2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.intecbrussel.application.IceCreamAppV2" />
+      <module name="IceCreamShopTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecbrussel.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.IceCreamAppV2" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,5 +78,53 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java</url>
+          <line>14</line>
+          <properties class="be.intecbrussel.sellers.IceCreamCar" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/application/IceCreamAppV2.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java</url>
+          <line>11</line>
+          <properties field="stock" class="be.intecbrussel.sellers.IceCreamCar" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java</url>
+          <line>12</line>
+          <properties field="profit" class="be.intecbrussel.sellers.IceCreamCar" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/be/intecbrussel/sellers/IceCreamCar.java</url>
+          <line>9</line>
+          <properties field="priceList" class="be.intecbrussel.sellers.IceCreamCar" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

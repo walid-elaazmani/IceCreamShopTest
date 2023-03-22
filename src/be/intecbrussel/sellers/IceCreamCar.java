@@ -4,7 +4,9 @@ import be.intecbrussel.eatables.Cone;
 import be.intecbrussel.eatables.IceRocket;
 import be.intecbrussel.eatables.Magnum;
 
-public class IceCreamCar implements IceCreamSeller{
+import java.util.Optional;
+
+public class IceCreamCar implements IceCreamSeller {
     private PriceList priceList;
 
     Stock stock;
@@ -12,59 +14,56 @@ public class IceCreamCar implements IceCreamSeller{
 
     public IceCreamCar(PriceList priceList) {
         this.priceList = priceList;
-        stock = new Stock(3,4,10,4);
-
+        stock = new Stock(1, 3, 10, 4);
     }
 
-    
+
     @Override
     public Cone orderCone(Cone.Flavor[] flavors) {
-        profit += priceList.getRocketprice() * flavors.length * 0.25;
         return prepareCone(flavors);
     }
 
-    private Cone prepareCone(Cone.Flavor[] flavors){
+    private Cone prepareCone(Cone.Flavor[] flavors) {
 
-        if (stock.getCones() > 0 && stock.getBalls() > 0 && flavors.length <= stock.getBalls()) {
-            stock.setCones(stock.getCones()-1);
+        if (stock.getCones() <= 0 || stock.getBalls() <= 0 || flavors.length > stock.getBalls()) {
+            return null;
+        } else {
+            profit += priceList.getRocketprice() * flavors.length * 0.25;
+            stock.setCones(stock.getCones() - 1);
             stock.setBalls(stock.getBalls() - flavors.length);
             return new Cone(flavors);
-        } else System.out.println("no more");
-
-        return null;
+        }
 
     }
-    
+
     @Override
     public IceRocket orderIceRocket() {
-        profit += priceList.getRocketprice() * 0.20;
         return prepareIceRocket();
     }
 
-    private IceRocket prepareIceRocket(){
-
-        if (stock.getIceRockets() > 0) {
-            stock.setIceRockets(stock.getIceRockets()-1);
+    private IceRocket prepareIceRocket() {
+        if (stock.getIceRockets() <= 0){
+            return null;
+        } else {
+            profit += priceList.getRocketprice() * 0.20;
+            stock.setIceRockets(stock.getIceRockets() - 1);
             return new IceRocket();
-        } else System.out.println("no moree");
-
-        return null;
-
+        }
     }
 
     @Override
     public Magnum orderMagnum(Magnum.MagnumType type) {
-        profit += priceList.getMagnumPrice(type) * 0.01;
         return prepareMagnum(type);
     }
 
-    private Magnum prepareMagnum(Magnum.MagnumType type){
+    private Magnum prepareMagnum(Magnum.MagnumType type) {
         if (stock.getMagni() > 0) {
-            stock.setMagni(stock.getMagni()-1);
+            return null;
+        } else {
+            profit += priceList.getMagnumPrice(type) * 0.01;
+            stock.setMagni(stock.getMagni() - 1);
             return new Magnum(type);
-        } else System.out.println("no moreee");
-
-        return null;
+        }
     }
 
     @Override

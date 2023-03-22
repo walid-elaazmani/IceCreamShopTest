@@ -35,6 +35,7 @@ public class IceCreamSalon implements IceCreamSeller{
         return magnum;
     }
 
+
     @Override
     public double getProfit() {
         return totalProfit;
