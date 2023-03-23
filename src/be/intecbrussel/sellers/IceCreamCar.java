@@ -20,7 +20,14 @@ public class IceCreamCar implements IceCreamSeller {
 
     @Override
     public Cone orderCone(Cone.Flavor[] flavors) {
-        return prepareCone(flavors);
+        
+        Cone check = prepareCone();
+        
+        if(check != null){
+             profit += priceList.getRocketprice() * flavors.length * 0.25;
+        }
+        
+        return check;
     }
 
     private Cone prepareCone(Cone.Flavor[] flavors) {
@@ -29,7 +36,6 @@ public class IceCreamCar implements IceCreamSeller {
             System.out.prinln("No more Cones")
             return null;
         } else {
-            profit += priceList.getRocketprice() * flavors.length * 0.25;
             stock.setCones(stock.getCones() - 1);
             stock.setBalls(stock.getBalls() - flavors.length);
             return new Cone(flavors);
@@ -39,7 +45,14 @@ public class IceCreamCar implements IceCreamSeller {
 
     @Override
     public IceRocket orderIceRocket() {
-        return prepareIceRocket();
+        
+        IceRocket check = prepareIceRocket();
+        
+        if(check != null){
+             profit += priceList.getRocketprice() * 0.20;
+        }
+        
+        return check;
     }
 
     private IceRocket prepareIceRocket() {
@@ -47,7 +60,6 @@ public class IceCreamCar implements IceCreamSeller {
             System.out.prinln("No more icerockets")
             return null;
         } else {
-            profit += priceList.getRocketprice() * 0.20;
             stock.setIceRockets(stock.getIceRockets() - 1);
             return new IceRocket();
         }
@@ -55,15 +67,22 @@ public class IceCreamCar implements IceCreamSeller {
 
     @Override
     public Magnum orderMagnum(Magnum.MagnumType type) {
-        return prepareMagnum(type);
+       
+         Magnum check = prepareMagnum();
+        
+        if(check != null){
+             profit += priceList.getMagnumPrice(type) * 0.01;
+        }
+        
+        return check;
+        
     }
-
+   
     private Magnum prepareMagnum(Magnum.MagnumType type) {
         if (stock.getMagni() > 0) {
             System.out.prinln("No more magni")
             return null;
         } else {
-            profit += priceList.getMagnumPrice(type) * 0.01;
             stock.setMagni(stock.getMagni() - 1);
             return new Magnum(type);
         }
