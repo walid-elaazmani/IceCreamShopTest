@@ -75,11 +75,10 @@ public class IceCreamCar implements IceCreamSeller {
         }
         
         return check;
-        
     }
    
     private Magnum prepareMagnum(Magnum.MagnumType type) {
-        if (stock.getMagni() > 0) {
+        if (stock.getMagni() <= 0) {
             System.out.println("No more magni");
             return null;
         } else {

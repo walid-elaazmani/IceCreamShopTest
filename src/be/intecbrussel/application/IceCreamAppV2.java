@@ -16,7 +16,6 @@ public class IceCreamAppV2 {
 
         Eatable[] eatables = {
                 iceCreamCar.orderIceRocket(),
-
                 iceCreamCar.orderMagnum(Magnum.MagnumType.ALPINENUTS),
                 iceCreamCar.orderMagnum(Magnum.MagnumType.ROMANTICSTRAWBERRIES),
                 iceCreamCar.orderCone(new Cone.Flavor[]{Cone.Flavor.BANANA, Cone.Flavor.LEMON, Cone.Flavor.MOKKA}),
@@ -28,9 +27,9 @@ public class IceCreamAppV2 {
 
 
         for (Eatable eatable : eatables) {
-            if(eatable != null){
+            if(eatable != null) {
                 eatable.eat();
-            } else System.out.println("No more of that particular icecream" );
+            }
         }
 
         System.out.format("%.2f € \n", iceCreamCar.getProfit());
