@@ -12,9 +12,9 @@ public class IceCreamCar implements IceCreamSeller {
     Stock stock;
     double profit;
 
-    public IceCreamCar(PriceList priceList) {
+    public IceCreamCar(PriceList priceList, Stock stock) {
         this.priceList = priceList;
-        stock = new Stock(1, 3, 10, 4);
+        this.stock = stock;
     }
 
 
