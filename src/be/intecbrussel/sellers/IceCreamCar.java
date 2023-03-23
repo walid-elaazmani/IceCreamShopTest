@@ -26,6 +26,7 @@ public class IceCreamCar implements IceCreamSeller {
     private Cone prepareCone(Cone.Flavor[] flavors) {
 
         if (stock.getCones() <= 0 || stock.getBalls() <= 0 || flavors.length > stock.getBalls()) {
+            System.out.prinln("No more Cones")
             return null;
         } else {
             profit += priceList.getRocketprice() * flavors.length * 0.25;
@@ -43,6 +44,7 @@ public class IceCreamCar implements IceCreamSeller {
 
     private IceRocket prepareIceRocket() {
         if (stock.getIceRockets() <= 0){
+            System.out.prinln("No more icerockets")
             return null;
         } else {
             profit += priceList.getRocketprice() * 0.20;
@@ -58,6 +60,7 @@ public class IceCreamCar implements IceCreamSeller {
 
     private Magnum prepareMagnum(Magnum.MagnumType type) {
         if (stock.getMagni() > 0) {
+            System.out.prinln("No more magni")
             return null;
         } else {
             profit += priceList.getMagnumPrice(type) * 0.01;
