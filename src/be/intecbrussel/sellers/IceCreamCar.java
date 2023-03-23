@@ -21,7 +21,7 @@ public class IceCreamCar implements IceCreamSeller {
     @Override
     public Cone orderCone(Cone.Flavor[] flavors) {
         
-        Cone check = prepareCone();
+        Cone check = prepareCone(flavors);
         
         if(check != null){
              profit += priceList.getRocketprice() * flavors.length * 0.25;
@@ -33,7 +33,7 @@ public class IceCreamCar implements IceCreamSeller {
     private Cone prepareCone(Cone.Flavor[] flavors) {
 
         if (stock.getCones() <= 0 || stock.getBalls() <= 0 || flavors.length > stock.getBalls()) {
-            System.out.prinln("No more Cones")
+            System.out.println("No more Cones");
             return null;
         } else {
             stock.setCones(stock.getCones() - 1);
@@ -57,7 +57,7 @@ public class IceCreamCar implements IceCreamSeller {
 
     private IceRocket prepareIceRocket() {
         if (stock.getIceRockets() <= 0){
-            System.out.prinln("No more icerockets")
+            System.out.println("No more icerockets");
             return null;
         } else {
             stock.setIceRockets(stock.getIceRockets() - 1);
@@ -68,7 +68,7 @@ public class IceCreamCar implements IceCreamSeller {
     @Override
     public Magnum orderMagnum(Magnum.MagnumType type) {
        
-         Magnum check = prepareMagnum();
+         Magnum check = prepareMagnum(type);
         
         if(check != null){
              profit += priceList.getMagnumPrice(type) * 0.01;
@@ -80,7 +80,7 @@ public class IceCreamCar implements IceCreamSeller {
    
     private Magnum prepareMagnum(Magnum.MagnumType type) {
         if (stock.getMagni() > 0) {
-            System.out.prinln("No more magni")
+            System.out.println("No more magni");
             return null;
         } else {
             stock.setMagni(stock.getMagni() - 1);

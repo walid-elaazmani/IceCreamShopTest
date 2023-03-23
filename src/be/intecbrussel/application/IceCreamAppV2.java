@@ -6,12 +6,13 @@ import be.intecbrussel.eatables.IceRocket;
 import be.intecbrussel.eatables.Magnum;
 import be.intecbrussel.sellers.IceCreamCar;
 import be.intecbrussel.sellers.PriceList;
+import be.intecbrussel.sellers.Stock;
 
 public class IceCreamAppV2 {
     public static void main(String[] args) {
 
         PriceList priceList = new PriceList(1,1,1);
-        IceCreamCar iceCreamCar = new IceCreamCar(priceList);
+        IceCreamCar iceCreamCar = new IceCreamCar(priceList, new Stock(1,2,3,4));
 
         Eatable[] eatables = {
                 iceCreamCar.orderIceRocket(),
