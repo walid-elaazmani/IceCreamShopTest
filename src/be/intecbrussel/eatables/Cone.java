@@ -12,7 +12,7 @@ public class Cone implements Eatable{
         PISTACHE;
     }
 
-    Flavor[] balls;
+    private Flavor[] balls;
 
     public Cone() {
     }

@@ -9,8 +9,8 @@ import java.util.Optional;
 public class IceCreamCar implements IceCreamSeller {
     private PriceList priceList;
 
-    Stock stock;
-    double profit;
+    private Stock stock;
+    private double profit;
 
     public IceCreamCar(PriceList priceList, Stock stock) {
         this.priceList = priceList;
@@ -47,11 +47,11 @@ public class IceCreamCar implements IceCreamSeller {
     public IceRocket orderIceRocket() {
         
         IceRocket check = prepareIceRocket();
-        
+
         if(check != null){
              profit += priceList.getRocketprice() * 0.20;
         }
-        
+
         return check;
     }
 

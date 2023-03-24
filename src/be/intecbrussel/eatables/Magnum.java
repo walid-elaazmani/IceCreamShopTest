@@ -5,7 +5,7 @@ public class Magnum implements Eatable {
         MILKCHOCOLATE, WHITECHOCOLATE, BLACKCHOCOLATE, ALPINENUTS, ROMANTICSTRAWBERRIES;
     }
 
-    MagnumType type;
+    private MagnumType type;
 
     public Magnum() {
     }
